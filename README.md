@@ -1,29 +1,56 @@
-# PlanetScale Golang Quickstart
+# Learn how to integrate PlanetScale with a sample Golang application
 
-## Setup
+This sample application demonstrates how to connect to a PlanetScale MySQL database, create and run migrations, seed the database, and display the data.
 
-1. Rename the `.env.example` file to `.env`
-2. Add your PlanetScale connection string to the DSN environment variable
-   property. It should look like
-   `DSN=a07l1lwsfgix:pscale_pw_rAkT8COqDTkQTKCCkz4dIPmvVOQfxYkbPuG3F3iEcQQ@tcp(ne6uu6jolloj.us-west-2.psdb.cloud)/go-quickstart?tls=true`
-3. Install the required dependencies:
+For the full tutorial, see the [Golang PlanetScale documentation](https://docs.planetscale.com/tutorials/connect-golang-app).
 
-```
-go get github.com/gorilla/mux
-github.com/joho/godotenv
-gorm.io/gorm
-gorm.io/driver/mysql
+## Set up the Golang app
+
+1. Clone the starter Symfony application:
+
+```bash
+git clone git@github.com:planetscale/golang-example.git
 ```
 
-We'll use `gorill/mux` as our router for the app. We'll use `joho/godotenv` to
-easily load our environment variables We'll use the `gorm` ORM and accompanying
-MySQL driver to talk to our PlanetScale database.
+2. Navigate into the folder and install the dependencies:
 
-4. Run the application via `go run main.go` in your terminal.
-5. Navigate to `localhost:8080/seed` to run the migrations and add starter data.
+```bash
+cd golang-example
+go mod download
+```
 
-At this point you can navigate to the other routes to see all the products
-(`/products`), a single product (`/products/{id}`), all the categories
-(`/categories`), or just a single category (`/categories/{id}`).
+3. Copy the `.env.example` file into `.env`:
 
-You're all set!
+```bash
+cp .env.example .env
+``` 
+
+## Set up the database
+
+1. Sign up for a [free PlanetScale account](https://app.planetscale.com/sign-up).
+2. Create a new database. A default branch, `main`, will be created for you.
+
+## Connect to the Golang app
+
+1. On the database overview page in the PlanetScale dashboard, click "**Connect**".
+2. Click "**New password**".
+3. In the "**Connect to**" dropdown, select Golang.
+4. Copy the connection string.
+5. Open your `.env` file and paste the connection string in as the value for `DSN`. You're now connected!
+
+## Run migrations and seeder
+
+1. Start the Golang app:
+
+```bash
+go run main.go
+```
+
+2. Navigate to [`localhost:8080/seed`](http://localhost:8080/seed) to run the migrations and the seeder.
+ 
+3. View the product and category data as follows:
+
+- Get all products &mdash; [`localhost:8080/products`](http://localhost:8080/products)
+- Get all categories &mdash; [`localhost:8080/categories`](http://localhost:8080/categories)
+- Get a single product &mdash; [`localhost:8080/product/{id}`](http://localhost:8080/products/1)
+- Get a single category &mdash; [`localhost:8080/category/{id}`](http://localhost:8080/categories/1)
