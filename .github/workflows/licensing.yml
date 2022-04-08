@@ -18,4 +18,5 @@ jobs:
         with:
           fetch-depth: 0
       - run: sudo gem install license_finder
+      - run: go mod download
       - run: license_finder
