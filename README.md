@@ -1,22 +1,21 @@
-# Learn how to integrate PlanetScale with a sample Golang application
+# Learn how to integrate PlanetScale with a sample Go application
 
 This sample application demonstrates how to connect to a PlanetScale MySQL database, create and run migrations, seed the database, and display the data.
 
-For the full tutorial, see the [Golang PlanetScale documentation](https://docs.planetscale.com/tutorials/connect-golang-app).
+For the full tutorial, see the [Go PlanetScale documentation](https://docs.planetscale.com/tutorials/connect-go-app).
 
-## Set up the Golang app
+## Set up the Go app
 
-1. Clone the starter Symfony application:
+1. Clone the starter Go application:
 
 ```bash
 git clone git@github.com:planetscale/golang-example.git
 ```
 
-2. Navigate into the folder and install the dependencies:
+2. Navigate into the folder:
 
 ```bash
 cd golang-example
-go mod download
 ```
 
 3. Copy the `.env.example` file into `.env`:
@@ -30,20 +29,20 @@ cp .env.example .env
 1. Sign up for a [free PlanetScale account](https://app.planetscale.com/sign-up).
 2. Create a new database. A default branch, `main`, will be created for you.
 
-## Connect to the Golang app
+## Connect to the Go app
 
 1. On the database overview page in the PlanetScale dashboard, click "**Connect**".
 2. Click "**New password**".
-3. In the "**Connect to**" dropdown, select Golang.
+3. In the "**Connect to**" dropdown, select Go.
 4. Copy the connection string.
 5. Open your `.env` file and paste the connection string in as the value for `DSN`. You're now connected!
 
 ## Run migrations and seeder
 
-1. Start the Golang app:
+1. Start the Go app:
 
 ```bash
-go run main.go
+go run .
 ```
 
 2. Navigate to [`localhost:8080/seed`](http://localhost:8080/seed) to run the migrations and the seeder.
