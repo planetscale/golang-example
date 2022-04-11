@@ -19,7 +19,7 @@ jobs:
           fetch-depth: 0
       - run: sudo gem install license_finder
       - run: go mod download
-      - run: license_finder
-      - run: license_finder approvals add Mozilla Public License 2.0
-      - run: license_finder approvals add New BSD
+      - run: license_finder approvals add "Mozilla Public License 2.0"
+      - run: license_finder approvals add "New BSD"
       - run: license_finder approvals add MIT
+      - run: license_finder
