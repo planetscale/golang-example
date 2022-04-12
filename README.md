@@ -9,7 +9,7 @@ For the full tutorial, see the [Go PlanetScale documentation](https://docs.plane
 1. Clone the starter Go application:
 
 ```bash
-git clone git@github.com:planetscale/golang-example.git
+git clone https://github.com/planetscale/golang-example
 ```
 
 2. Navigate into the folder:
