@@ -20,7 +20,6 @@ type Product struct {
 	ID          int
 	Name        string
 	Description string
-	Price       int // TODO(mdlayher/holly): this is unused, remove?
 	Image       string
 	CategoryID  int
 	Category    Category `gorm:"foreignKey:CategoryID"`
