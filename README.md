@@ -2,7 +2,7 @@
 
 This sample application demonstrates how to connect to a PlanetScale MySQL database, create and run migrations, seed the database, and display the data.
 
-For the full tutorial, see the [Go PlanetScale documentation](https://docs.planetscale.com/tutorials/connect-go-app).
+For the full tutorial, see the [Go PlanetScale documentation](https://planetscale.com/docs/tutorials/connect-go-app).
 
 ## Set up the Go app
 
@@ -22,7 +22,7 @@ cd golang-example
 
 ```bash
 cp .env.example .env
-``` 
+```
 
 ## Set up the database
 
@@ -46,7 +46,7 @@ go run .
 ```
 
 2. Navigate to [`localhost:8080/seed`](http://localhost:8080/seed) to run the migrations and the seeder.
- 
+
 3. View the product and category data as follows:
 
 - Get all products &mdash; [`localhost:8080/products`](http://localhost:8080/products)
