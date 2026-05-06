@@ -1,5 +1,7 @@
 # Learn how to integrate PlanetScale with a sample Go application
 
+> **Note:** This tutorial targets PlanetScale Vitess/MySQL and the MySQL connection flow in the steps below. PlanetScale also offers managed PostgreSQL; use a PostgreSQL driver and Postgres connection string for those databases. For more information and examples, see the [PlanetScale Postgres documentation](https://planetscale.com/docs/postgres).
+
 This sample application demonstrates how to connect to a PlanetScale MySQL database, create and run migrations, seed the database, and display the data.
 
 For the full tutorial, see the [Go PlanetScale documentation](https://planetscale.com/docs/tutorials/connect-go-app).
