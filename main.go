@@ -49,7 +49,7 @@ func main() {
 	// Create an API handler which serves data from PlanetScale.
 	handler := NewHandler(db)
 
-	// Start an HTTP API server.
+	// Start a HTTP API server.
 	const addr = ":8080"
 	log.Printf("successfully connected to PlanetScale, starting HTTP server on %q", addr)
 	if err := http.ListenAndServe(addr, handler); err != nil {
@@ -57,12 +57,12 @@ func main() {
 	}
 }
 
-// A Handler is an HTTP API server handler.
+// A Handler is a HTTP API server handler.
 type Handler struct {
 	db *gorm.DB
 }
 
-// NewHandler creates an http.Handler which wraps a PlanetScale database
+// NewHandler creates a http.Handler which wraps a PlanetScale database
 // connection.
 func NewHandler(db *gorm.DB) http.Handler {
 	h := &Handler{db: db}
